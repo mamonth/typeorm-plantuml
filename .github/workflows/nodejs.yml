@@ -1,4 +1,4 @@
-name: Typeorm UML
+name: Typeorm PlantUML
 on:
   - push
 jobs:
@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies and build typeorm-uml
+      - name: Install dependencies and build typeorm-plantuml
         run: |
           npm ci --ignore-scripts
           npm run build

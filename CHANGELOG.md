@@ -3,6 +3,10 @@
 ## [Unreleased] - TBD
 
 -
+## [v1.7.0] (2024-10-01)
+
+- TypeORM v0.3.x support added
+- renamed fork to typeorm-plantuml
 
 ## [v1.6.5] (2022-03-03)
 

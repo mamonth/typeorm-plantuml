@@ -31,7 +31,7 @@
 	],
 	"main": "lib/index.js",
 	"bin": {
-		"typeorm-uml": "./bin/run"
+		"typeorm-plantuml": "./bin/run"
 	},
 	"oclif": {
 		"bin": "typeorm-plantuml"
@@ -45,7 +45,7 @@
 		"lint": "eslint . --ext .ts --ignore-pattern lib --ignore-pattern node_modules",
 		"prepublish": "npm run build",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"typeorm-uml": "./bin/run"
+		"typeorm-plantuml": "./bin/run"
 	},
 	"dependencies": {
 		"@oclif/command": "~1.8.36",

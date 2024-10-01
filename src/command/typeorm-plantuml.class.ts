@@ -3,7 +3,7 @@ import { Command, flags } from '@oclif/command';
 import { TypeormUml } from '../builder';
 import { Colors, Direction, Format } from '../types';
 
-class TypeormUmlCommand extends Command {
+class TypeormPlantumlCommand extends Command {
 
 	static description = 'Generates a database UML diagram based on Typeorm entities.';
 
@@ -89,7 +89,7 @@ class TypeormUmlCommand extends Command {
 	 */
 	public async run(): Promise<any> {
 		try {
-			const { args, flags } = this.parse( TypeormUmlCommand );
+			const { args, flags } = this.parse( TypeormPlantumlCommand );
 
 			const typeormUml = new TypeormUml();
 			const colors = new Map<keyof Colors, string>();
@@ -102,7 +102,7 @@ class TypeormUmlCommand extends Command {
 				} );
 			}
 
-			typeormUml.build(
+			await typeormUml.build(
 				args.configName,
 				{
 					...flags,
@@ -117,4 +117,4 @@ class TypeormUmlCommand extends Command {
 
 }
 
-export = TypeormUmlCommand;
+export = TypeormPlantumlCommand;

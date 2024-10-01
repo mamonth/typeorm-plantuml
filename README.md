@@ -1,4 +1,4 @@
-# typeorm-uml
+# typeorm-plantuml
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/typeorm-plantuml.svg)](https://www.npmjs.com/package/typeorm-plantuml)
@@ -130,7 +130,7 @@ createConnection().then( async ( connection ) => {
 [**typeorm/typescript-example**](https://github.com/typeorm/typescript-example)
 
 ```sh-session
-typeorm-uml --format=svg --with-table-names-only
+typeorm-plantuml --format=svg --with-table-names-only
 ```
 
 [![typeorm/typescript-example](http://www.plantuml.com/plantuml/svg/ZPF1Yjim48RlUehf5aeC2SiMSbcCsJJTjdif9OJIMv6jIImYQumq8J59thsIxKrCcgMrmPRcc_d_aIK_UPQEjvKHuft2bRO8B7E38xIomZ6eFBuJGCkQ6xXBywmBfVTvTdSfgZVOZFO975OQZJf1o4iBCkGUFqkt-Kf6eLsGoj8F8J5BxrkMmJxAd4LMroATmljPU_rLUwuBWMrbRrK-VubtgAnGQJbnM91JGmbHQeNW6HqIDpNwBb0XbwJwIQ5TOL08fXgO82Tcga3feCQQh11-esqjdQp0qTQgu67HmNGGDw7DA0_aWl00-58gsccxXfKq7WUab5Rjd6P6sxC1B8pq7Wu2mlL95fjrQpoFgu9TgHbRCdEETbtGermxHDjLX8-0xWgSH5XXk_KmbunhSiqOYdu42KX_cKNZTiT1AqWUuUNxSlJma408zti1yOn4z7Esc7-RBKOVfzF0JsUF7-Hv37LuTjhjw3zqmp4qDuG72RZdo9VFlvP3msZmkr-1HlywRCPlaajZD-cbsPZoSjrmXrwpht1egrtmyJYP70zlUeYpsRyInHDQ5N_ZFm00)](http://www.plantuml.com/plantuml/svg/ZPF1Yjim48RlUehf5aeC2SiMSbcCsJJTjdif9OJIMv6jIImYQumq8J59thsIxKrCcgMrmPRcc_d_aIK_UPQEjvKHuft2bRO8B7E38xIomZ6eFBuJGCkQ6xXBywmBfVTvTdSfgZVOZFO975OQZJf1o4iBCkGUFqkt-Kf6eLsGoj8F8J5BxrkMmJxAd4LMroATmljPU_rLUwuBWMrbRrK-VubtgAnGQJbnM91JGmbHQeNW6HqIDpNwBb0XbwJwIQ5TOL08fXgO82Tcga3feCQQh11-esqjdQp0qTQgu67HmNGGDw7DA0_aWl00-58gsccxXfKq7WUab5Rjd6P6sxC1B8pq7Wu2mlL95fjrQpoFgu9TgHbRCdEETbtGermxHDjLX8-0xWgSH5XXk_KmbunhSiqOYdu42KX_cKNZTiT1AqWUuUNxSlJma408zti1yOn4z7Esc7-RBKOVfzF0JsUF7-Hv37LuTjhjw3zqmp4qDuG72RZdo9VFlvP3msZmkr-1HlywRCPlaajZD-cbsPZoSjrmXrwpht1egrtmyJYP70zlUeYpsRyInHDQ5N_ZFm00)
