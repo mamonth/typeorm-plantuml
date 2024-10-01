@@ -4,3 +4,4 @@
 /examples/**/*.js
 /examples/**/*.js.map
 /tsconfig.tsbuildinfo
+/.idea

@@ -1,9 +1,9 @@
 # typeorm-uml
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/typeorm-uml.svg)](https://www.npmjs.com/package/typeorm-uml)
-[![Downloads/week](https://img.shields.io/npm/dw/typeorm-uml.svg)](https://www.npmjs.com/package/typeorm-uml)
-[![License](https://img.shields.io/npm/l/typeorm-uml.svg)](https://github.com/eugene-manuilov/typeorm-uml/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/typeorm-plantuml.svg)](https://www.npmjs.com/package/typeorm-plantuml)
+[![Downloads/week](https://img.shields.io/npm/dw/typeorm-plantuml.svg)](https://www.npmjs.com/package/typeorm-plantuml)
+[![License](https://img.shields.io/npm/l/typeorm-plantuml.svg)](https://github.com/eugene-manuilov/typeorm-plantuml/blob/master/package.json)
 
 A command line tool to generate UML diagrams for Typeorm projects. It uses [plantuml](https://plantuml.com/) to render diagrams and outputs an URL to a diagram.
 
@@ -12,7 +12,7 @@ A command line tool to generate UML diagrams for Typeorm projects. It uses [plan
 Install this command as a development dependency to your project:
 
 ```sh-session
-npm i -D typeorm-uml
+npm i -D typeorm-plantuml
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ Add a new script to your `package.json` to be able to run it:
 {
     "name": "myproject",
     "scripts": {
-        "db:diagram": "typeorm-uml ormconfig.json"
+        "db:diagram": "typeorm-plantuml ormconfig.json"
     }
 }
 ```
@@ -34,7 +34,7 @@ Then run `npm run db:diagram` and you will receive an URL to an image with your 
 
 ```sh-session
 USAGE
-  $ typeorm-uml [CONFIGNAME]
+  $ typeorm-plantuml [CONFIGNAME]
 
 ARGUMENTS
   CONFIGNAME  [default: ormconfig.json] Path to the Typeorm config file.
@@ -60,7 +60,7 @@ OPTIONS
 If you want to override colors used in the diagram, you can do it using `--color` flag. It accepts the key-value pair where key is an element and value is a color. You can use multiple `--color` flags to override multiple elements. For example:
 
 ```sh-session
-typeorm-uml path/to/ormconfig.json --color class.ArrowColor=#ff9900 --color class.BorderColor=#ff9900 --color class.BackgroundColor=#efefef --color column=#ddd
+typeorm-plantuml path/to/ormconfig.json --color class.ArrowColor=#ff9900 --color class.BorderColor=#ff9900 --color class.BackgroundColor=#efefef --color column=#ddd
 ```
 
 You can use `pkey`, `fkey` and `column` colors to override entity column icons, and `class.BackgroundColor`, `class.BorderColor`, `class.ArrowColor` to override enity class styles.
@@ -70,7 +70,7 @@ You can use `pkey`, `fkey` and `column` colors to override entity column icons, 
 If you use `.ts` entities in your Typeorm config, then run this command with `ts-node` like this:
 
 ```sh-session
-ts-node ./node_modules/.bin/typeorm-uml ormconfig.json
+ts-node ./node_modules/.bin/typeorm-plantuml ormconfig.json
 ```
 
 ## PlantUML
@@ -87,7 +87,7 @@ You can also import the `TypeormUml` class from this package and build UML diagr
 import { EOL } from 'os';
 import { join } from 'path';
 
-import { Direction, Flags, Format, TypeormUml } from 'typeorm-uml';
+import { Direction, Flags, Format, TypeormUml } from 'typeorm-plantuml';
 
 const configPath = join( __dirname, 'path/to/ormconfig.json' );
 const flags: Flags = {
@@ -108,7 +108,7 @@ Please, pay attention that the `TypeormUml::build()` method also accepts connect
 import { EOL } from 'os';
 import { join } from 'path';
 
-import { Direction, Flags, Format, TypeormUml } from 'typeorm-uml';
+import { Direction, Flags, Format, TypeormUml } from 'typeorm-plantuml';
 import { createConnection } from 'typeorm';
 
 createConnection().then( async ( connection ) => {
