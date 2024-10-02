@@ -3,6 +3,11 @@
 ## [Unreleased] - TBD
 
 -
+## [v1.7.1] (2024-10-02)
+
+- Fix errors after renaming fork
+- Fix minor issues with typeorm
+
 ## [v1.7.0] (2024-10-01)
 
 - TypeORM v0.3.x support added

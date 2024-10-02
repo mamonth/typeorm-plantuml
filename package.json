@@ -1,6 +1,6 @@
 {
 	"name": "typeorm-plantuml",
-	"version": "1.7.0",
+	"version": "1.7.1",
 	"description": "Generates UML diagrams for TypeORM projects",
 	"author": "Eugene Manuilov <eugene.manuilov@gmail.com>",
 	"contributors": [

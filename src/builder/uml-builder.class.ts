@@ -1,5 +1,4 @@
 import { DataSource, EntityMetadata } from 'typeorm';
-import { ConnectionMetadataBuilder } from 'typeorm/connection/ConnectionMetadataBuilder';
 import { ColumnMetadata } from 'typeorm/metadata/ColumnMetadata';
 import { ForeignKeyMetadata } from 'typeorm/metadata/ForeignKeyMetadata';
 

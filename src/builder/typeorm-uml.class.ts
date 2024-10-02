@@ -30,8 +30,8 @@ export class TypeormUml {
 		const builder = new UmlBuilder( connection, flags, styles );
 		const uml = await builder.buildUml();
 
-		if ( connection.isConnected ) {
-			await connection.close();
+		if ( connection.isInitialized ) {
+			await connection.destroy();
 		}
 
 		if ( flags.format === Format.PUML ) {
@@ -80,7 +80,10 @@ export class TypeormUml {
 		const connectionOptions = await connectionOptionsReader.get( flags.connection || 'default' );
 		const dataSource = new DataSource( connectionOptions );
 
-		await dataSource.initialize();
+		// @ts-ignore
+		await dataSource.buildMetadatas();
+
+		process.chdir( root );
 
 		return dataSource;
 	}
