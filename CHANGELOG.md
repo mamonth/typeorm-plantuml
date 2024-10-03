@@ -3,6 +3,10 @@
 ## [Unreleased] - TBD
 
 -
+## [v1.7.2] (2024-10-03)
+
+- add support for setting proxy through http_proxy\https_proxy environment variables
+
 ## [v1.7.1] (2024-10-02)
 
 - Fix errors after renaming fork

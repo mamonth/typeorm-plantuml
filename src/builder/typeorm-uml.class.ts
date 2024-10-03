@@ -107,6 +107,22 @@ export class TypeormUml {
 	}
 
 	/**
+	 * Gets global proxy settings.
+	 * @private
+	 */
+	private getHttpProxy() {
+		const proxyHost = process.env.https_proxy || process.env.http_proxy;
+		const proxyData = proxyHost?.match( /^(https?:\/\/)?([^:/]+)(:([0-9]+))?/i );
+		const proxySecure = proxyHost?.startsWith( 'https:' );
+		if ( !proxyData ) return;
+
+		return {
+			host: proxyData[2],
+			port: ( proxyData[4] || ( proxySecure ? 443 : 80 ) ),
+		};
+	}
+
+	/**
 	 * Downloads image into a file.
 	 *
 	 * @private
@@ -115,8 +131,19 @@ export class TypeormUml {
 	 * @returns {Promise} A promise object.
 	 */
 	private download( url: string, filename: string ): Promise<void> {
+		const proxyData = this.getHttpProxy();
+		const getOptions = !proxyData
+			? url // no proxy no drama
+			: {
+				...proxyData,
+				path: url,
+				headers: {
+					Host: ( new URL( url ) ).hostname,
+				},
+			};
+
 		return new Promise( ( resolve ) => {
-			get( url, ( response ) => {
+			get( getOptions, ( response ) => {
 				response.pipe( createWriteStream( this.getPath( filename ) ) );
 				response.on( 'end', resolve );
 			} );
